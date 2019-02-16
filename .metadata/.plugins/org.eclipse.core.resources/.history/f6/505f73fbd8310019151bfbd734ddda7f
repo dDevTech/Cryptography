@@ -1,0 +1,35 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		genRSAKeys();
+	}
+	public static void genRSAKeys() {
+		int p=MathTools.generatePrime(1000);
+		int q=MathTools.generatePrime(1000);
+		System.out.println(p+" "+q);
+		int n= p*q;
+		int phi=(p-1)*(q-1);
+		int e=MathTools.genE(phi,1000);
+		int d = MathTools.genPrivateKey(e, phi);
+		//n,e public key
+		//n,d private key
+
+		System.out.println("E:"+e);
+		System.out.println("D:"+d);
+		System.out.println("Phi:"+phi);
+		long s=MathTools.encrypt(120000000, e, n);
+		System.out.println(s);
+		long ss=MathTools.decrypt(s, d, n);
+		System.out.println(ss);
+	}
+	public void encryptText(String message,int e,int n,int multiplier) {
+		long value=0;
+		for(int i=0;i<message.length();i++) {
+			int ascii=(int)message.charAt(i);
+			value+=(message.length()-1-i)*ascii;
+		}
+	}
+	
+}
