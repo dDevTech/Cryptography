@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Encapsulate field &apos;Message.s&apos; in &apos;Message&apos;&#x0D;&#x0A;- Original project: &apos;Constants&apos;&#x0D;&#x0A;- Original element: &apos;Message.s&apos;&#x0D;&#x0A;- Getter method name: &apos;getS&apos;&#x0D;&#x0A;- Setter method name: &apos;setS&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;s&apos;" flags="589830" getter="getS" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;{Message.java[Message^s" insertion="0" setter="setS" stamp="1547245558175" version="1.0" visibility="1"/>
-</session>
